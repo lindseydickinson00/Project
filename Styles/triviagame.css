@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    font-family: 'Cinzel', serif;
+    background: radial-gradient(circle at top, #1a1a1a, #000000);
+    color: #f5f5f5;
+    text-align: center;
+}
+
+/* Container */
+.container {
+    margin-top: 120px; /* increased to push content below nav */
+}
+
+/* Title */
+h1 {
+    font-size: 48px;
+    color: gold;
+    text-shadow: 0 0 10px gold;
+    margin-top: 20px; /* small spacing for safety */
+}
+
+/* Subtitle */
+.subtitle {
+    font-style: italic;
+    color: #ccc;
+}
+
+/* Question box */
+.question-box {
+    background: rgba(20, 20, 20, 0.9);
+    border: 2px solid gold;
+    padding: 25px;
+    margin: 30px auto;
+    width: 60%;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+}
+
+/* Buttons */
+.answer-btn {
+    display: block;
+    margin: 12px auto;
+    padding: 12px;
+    width: 60%;
+    border-radius: 10px;
+    border: 1px solid gold;
+    background: #111;
+    color: gold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.answer-btn:hover {
+    background: gold;
+    color: black;
+    transform: scale(1.05);
+}
+
+/* Result text */
+#result {
+    font-size: 22px;
+    margin-top: 20px;
+}
+
+/* House result */
+.house {
+    font-size: 30px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* House colors */
+.gryffindor {
+    color: #ae0001;
+    text-shadow: 0 0 10px #ae0001;
+}
+
+.slytherin {
+    color: #2a623d;
+    text-shadow: 0 0 10px #2a623d;
+}
+
+.ravenclaw {
+    color: #222f5b;
+    text-shadow: 0 0 10px #222f5b;
+}
+
+.hufflepuff {
+    color: #ffdb00;
+    text-shadow: 0 0 10px #ffdb00;
+}
+
+/* Restart button */
+#restart {
+    margin-top: 30px;
+    padding: 10px 20px;
+    background: gold;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#restart:hover {
+    background: orange;
+}
+

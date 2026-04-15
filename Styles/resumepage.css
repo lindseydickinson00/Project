@@ -1,0 +1,60 @@
+/* Overall page layout */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f7f7f7;
+  margin: 0;
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* Resume container — centered but no white box */
+.resume {
+  width: 70%;
+  max-width: 900px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* Headings */
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 5px;
+}
+
+h2 {
+  margin-top: 40px;
+  font-size: 1.6rem;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 5px;
+}
+
+h3 {
+  margin-top: 25px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* Paragraphs */
+p {
+  margin: 5px 0 10px;
+  line-height: 1.4;
+}
+
+/* Lists */
+ul {
+  text-align: left;
+  margin: 10px auto 20px;
+  width: 85%;
+  line-height: 1.5;
+}
+
+/* Links */
+a {
+  color: #0056b3;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

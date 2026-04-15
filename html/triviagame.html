@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Harry Potter Trivia Game</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- ✅ FIXED PATH (lowercase styles) -->
+<link rel="stylesheet" href="../styles/triviagame.css">
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Sorting Hat Trivia</h1>
+    <p class="subtitle">Answer wisely... your house awaits.</p>
+
+    <div class="question-box" id="game">
+        <h2 id="question"></h2>
+        <div id="answers"></div>
+    </div>
+
+    <div id="result"></div>
+    <div class="house" id="house"></div>
+</div>
+
+<!-- ✅ SCRIPT MOVED TO BOTTOM -->
+<script>
+const questions = [
+    {
+        question: "Who is your favorite Harry Potter character?",
+        answers: ["Malfoy", "Hermoine", "Luna", "Cedric"]
+    },
+    {
+        question: "What is the best pet?",
+        answers: ["Crookshanks", "Hedwig", "Scabbers", "Fawkes"]
+    },
+    {
+        question: "Whats your favorite subject?",
+        answers: ["Potions", "Charms", "Astronomy", "Choir"]
+    },
+    {
+        question: "What is your favorite color?",
+        answers: ["Green", "Red", "Blue", "Yellow"]
+    },
+    {
+        question: "What magical sport is best?",
+        answers: ["Duelling", "Quidditch", "Wizard Chess", "Gobstones"]
+    }
+];
+
+let currentQuestion = 0;
+
+let houses = {
+    Slytherin: 0,
+    Gryffindor: 0,
+    Ravenclaw: 0,
+    Hufflepuff: 0
+};
+
+// Answer mapping
+const houseMap = ["Slytherin", "Gryffindor", "Ravenclaw", "Hufflepuff"];
+
+function loadQuestion() {
+    let q = questions[currentQuestion];
+    document.getElementById("question").textContent = q.question;
+
+    let answersDiv = document.getElementById("answers");
+    answersDiv.innerHTML = "";
+
+    q.answers.forEach((answer, index) => {
+        let btn = document.createElement("button");
+        btn.textContent = answer;
+        btn.classList.add("answer-btn");
+
+        btn.onclick = () => selectAnswer(index);
+        answersDiv.appendChild(btn);
+    });
+}
+
+function selectAnswer(index) {
+    let house = houseMap[index];
+    houses[house]++;
+
+    currentQuestion++;
+
+    if (currentQuestion < questions.length) {
+        loadQuestion();
+    } else {
+        showResult();
+    }
+}
+
+function showResult() {
+    document.getElementById("game").style.display = "none";
+
+    let sortedHouse = Object.keys(houses).reduce((a, b) =>
+        houses[a] > houses[b] ? a : b
+    );
+
+    document.getElementById("result").textContent =
+        "The Sorting Hat has decided...";
+
+    let houseDiv = document.getElementById("house");
+    houseDiv.textContent = "🏰 You belong in " + sortedHouse + "!";
+    houseDiv.classList.add(sortedHouse.toLowerCase());
+}
+
+loadQuestion();
+</script>
+
+</body>
+</html>

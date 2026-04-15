@@ -1,0 +1,80 @@
+.header{
+    background-color: black; 
+    color: white; 
+    height:100px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding-left:0;
+}
+
+.mainbody li {
+    text-align: center;
+}
+
+
+.mainbody {
+    background-color: whitesmoke;
+    width: 80%;
+    margin: 0 auto;
+    text-align: left;
+}
+img {
+    display: block;
+    width: 100%;
+    margin: 10px auto;
+}
+
+.footer{
+    background-color: black;
+    color: white;
+    height:25px;
+    line-height: 25px;
+    position: fixed;
+    bottom:0px;
+    right:0px;
+    left:0px
+}
+
+.common{
+    font-family: "Segoe UI", Arial, sans-serif;
+    
+}
+nav{ background-color: lightgray;
+    padding:10px;
+    overflow:hidden;
+
+}
+
+nav a{
+    color: #333;
+    padding:10px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    float:left
+
+}
+nav a:hover{
+    background-color: #ccc;
+
+}
+ol, ul {
+  width: fit-content;   /* makes the list only as wide as needed */
+  margin: 0 auto;       /* centers the list block */
+  padding-left: 20px;   /* normal bullet indent */
+  text-align: left;     /* keeps bullets/text left-aligned */
+}
+
+.header, nav {
+    text-align: center;
+}
+.mainbody h2,
+.mainbody iframe {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+.mainbody li ul {
+    list-style-type: disc;   /* filled circle bullets */
+}
